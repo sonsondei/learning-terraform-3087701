@@ -53,6 +53,7 @@ module "autoscaling" {
   name = "blog"
   min_size = 1
   max_size = 2
+  desired_capacity = 2
 
   vpc_zone_identifier = module.vpc.public_subnets
   target_group_arns = module.alb.target_group_arns
